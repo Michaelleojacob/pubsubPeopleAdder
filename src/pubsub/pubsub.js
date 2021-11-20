@@ -4,7 +4,7 @@ function pubsub() {
   const logSubs = () => console.log(subs);
 
   const publish = (eventName, data) => {
-    if (!Array.isArray(subs[eventName])) return console.log('error');
+    if (!Array.isArray(subs[eventName])) return console.log(data);
     return subs[eventName].map((callback) => callback(data));
   };
 

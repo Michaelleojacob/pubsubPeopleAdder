@@ -1,3 +1,5 @@
+import ps from '../pubsub/pubsub';
+
 function peopleObj() {
   const peopleArr = [];
 
@@ -7,7 +9,10 @@ function peopleObj() {
 
   const getArrLength = () => peopleArr.length;
 
-  const addPerson = (person) => peopleArr.push(person);
+  const addPerson = (person) => {
+    peopleArr.push(person);
+    ps.publish('updatedArr', getCurrPeopleArr());
+  };
 
   const removePerson = (person) =>
     peopleArr.indexOf(person) !== -1 && peopleArr.splice(peopleArr.indexOf(person), 1);

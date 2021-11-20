@@ -1,5 +1,5 @@
 import cached from '../queryObj/queryObj';
-// import peopleArr from '../peopleObj/peopleObj';
+import peopleArr from '../peopleObj/peopleObj';
 
 function handleSubmit() {
   const { input } = cached;
@@ -7,7 +7,7 @@ function handleSubmit() {
   if (val === '') return;
   input.value = '';
   //* on submit add the person to the array and re render
-  // peopleArr.addPerson(val);
+  peopleArr.addPerson(val);
 }
 
 function getFormInput() {
