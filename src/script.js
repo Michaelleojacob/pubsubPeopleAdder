@@ -1,10 +1,8 @@
 import './style.css';
-import preventSubmit from './forminput/preventSubmit';
 import getFormInput from './forminput/forminput';
 import peopleArr from './peopleObj/peopleObj';
 import renderPeopleAndCounter from './updateContainerAndCounter/updateContainerAndCounter';
 
-preventSubmit();
 getFormInput();
 
 peopleArr.addPerson('mike');

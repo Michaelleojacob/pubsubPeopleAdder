@@ -12,7 +12,8 @@ function handleSubmit() {
 
 function getFormInput() {
   const { form } = cached;
-  return form.addEventListener('submit', handleSubmit);
+  form.addEventListener('submit', (e) => e.preventDefault());
+  form.addEventListener('submit', handleSubmit);
 }
 
 export default getFormInput;
